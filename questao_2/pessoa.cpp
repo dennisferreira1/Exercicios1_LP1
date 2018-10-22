@@ -7,7 +7,7 @@ using namespace std;
 Pessoa::Pessoa(string nome_, int idade_, float altura_):
 	m_nome(nome_), m_idade(idade_), m_altura(altura_){}
 
-Pessoa::~Pessoa(){};
+Pessoa::~Pessoa(){}
 
 string Pessoa::getNome(){
 	return m_nome;
