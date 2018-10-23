@@ -2,6 +2,7 @@
 #define DATA_H
 
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 class Data
@@ -10,10 +11,13 @@ private:
 	int m_dia;
 	int m_mes;
 	int m_ano;
+	struct tm* horarioLocal;
+	time_t timer;
+
 public:
 
 	Data(int dia_, int mes_, int ano_);
-	//Data();
+	Data();
 	~Data();
 
 	bool isValid();

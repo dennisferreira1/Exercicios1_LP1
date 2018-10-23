@@ -16,11 +16,15 @@ Data::Data(int dia_, int mes_, int ano_):m_dia(dia_), m_mes(mes_), m_ano(ano_)
 
 }
 
-/*Data::Data(){
-	m_dia=
-	m_mes=
-	m_ano=
-}*/
+Data::Data(){
+
+	time(&timer);
+	horarioLocal= localtime(&timer);
+
+	m_dia= horarioLocal->tm_mday;
+	m_mes= horarioLocal->tm_mon + 1;
+	m_ano= horarioLocal->tm_year + 1900;
+}
 Data::~Data(){}
 
 bool Data::isValid(){
