@@ -26,8 +26,10 @@ int Livro::getAno(){
 }
 
 ostream& operator<< (ostream& ostr, const Livro& l){
-
-	ostr<<"Titulo: "<<l.m_titulo<<endl
+	ostr<<"\n-----------------------"<<endl
+		<<"DADOS DO LIVRO"<<endl
+		<<"-----------------------"<<endl
+		<<"Titulo: "<<l.m_titulo<<endl
 		<<"Autor: "<<l.m_autor<<endl
 		<<"Edicao: "<<l.m_edicao<<endl
 		<<"Editora: "<<l.m_editora<<endl
