@@ -1,0 +1,20 @@
+Na linha 16 a classe "Empregado" herda os membros públicos da classe Pessoa como privados.
+Solução-> Herdar como público -> Alterar a linha 16 para ->"class Empregado : public Pessoa{".
+
+Na classe "Pessoa" faltou inicializar o atributo "m_idade".
+Solução-> Alterar a linha 10 para -> "Pessoa ( string nome_ , int idade_ ): m_nome(nome_), m_idade(idade_){};".
+
+Para a classe "Aluno", na construção, primeiro é construído o objeto da classe "Pessoa" e depois o da classe "Aluno", 
+pois a classe "Aluno" é uma classe derivada da classe base "Pessoa".
+Com isso o método construtor da classe base é invocado primeiro.
+Já na destruição, primeiro é destruído o objeto da classe "Aluno" e depois o da classe "Pessoa", pois o método destrutor
+da classe derivada é invocado primeiro e depois o da classe base.
+
+Para a classe "Gerente", na construção, primeiro é construído o objeto classe "Pessoa", depois o da classe "Empregado" e
+por ultimo o da classe "Gerente", pois a classe "Gerente" é uma classe derivada da classe base "Empregado" que é uma classe
+derivada da classe base "Pessoa". Com isso o método construtor invocado primeiro é o da classe base "Pessoa" pois ela não 
+deriva de outra classe.
+Já na destruição, primeiro é destruído o objeto da classe "Gerente", depois o da classe "Empregado" e por último o da
+classe "Pessoa", pois o método destrutor da última classe derivada é invocado primeiro, depois são invocados recursivamente
+os métodos destrutores das classes bases derivadas de outras classes até chegar em uma classe base não derivada de outra
+classe.  

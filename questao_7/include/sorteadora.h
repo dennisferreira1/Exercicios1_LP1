@@ -17,7 +17,6 @@ public:
 	Sorteadora();
 	int sortear();
 	int getValor();
-	void existe(int*);
 
 };
 

@@ -1,0 +1,2 @@
+Como os relacionamentos friends não são herdados, o uso desse template para sobrecarregar o operador de inserção faz com 
+que ele seja herdado pelas classes derivadas. Com isso, não precisa sobrecarregar o operador de inserção nas subclasses. 

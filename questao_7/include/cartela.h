@@ -8,14 +8,18 @@
 class Cartela
 {
 private:
-	int m_numeros[MAX_NUMERO];
+	int m_numeros[MAX_NUMEROS];
 	int m_total_numeros;
+	int m_total_acertos;
 
 public:
 	Cartela(Sorteadora* sorteadora);
 	~Cartela();
 
-	printCartela();
+	void verificar_numero(int numero);
+	int get_acertos();
+
+	void print_cartela();
 
 };
 
